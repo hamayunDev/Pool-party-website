@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pool Part</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="App_header">
+      <div class="logo">
+        <img src="images/logo.png" class="app-logo" alt="logo" />
+      </div>
+      <div>
+        <button class="connect-button">Connect Wallet</button>
+        <button class="connect-button docs-button">Docs</button>
+      </div>
+    </header>
+
+    <div class="Progress_container">
+      <div class="progress">
+        <div class="EpochProgress-labels">
+          <div class="EpochProgress-label">
+            Locked <span id="time">06:34:12</span>
+          </div>
+        </div>
+        <span id="unlocked"> Unlocked </span
+        ><i class="fa fa-lock" aria-hidden="true" id="lock"></i>
+        <span id="time">08:00:02</span>
+      </div>
+    </div>
+    <div class="stakes-parent-container">
+      <div class="Card" id="padd">
+        <div class="Card-title">
+          <h1 class="Card-title-text">My Stakes</h1>
+          <img
+            class="questionIcon"
+            id="stakesIcon"
+            width="25"
+            src="images/question.png"
+          />
+        </div>
+
+        <div class="stakes-section">
+          <div class="stakes-card-item pool1-card-item">
+            <div class="stakes-card-item-content">
+              <div class="stakes-info"><p class="stakes-text">Pool 1</p></div>
+              <div class="stakes-info">
+                <p class="stakes-text">PARTY</p>
+                <p class="stakes-text-faded">Staked</p>
+              </div>
+              <div class="stakes-info">
+                <p class="stakes-text-apy">5,807.15%</p>
+                <p class="stakes-text-faded">Win APR</p>
+              </div>
+            </div>
+            <div class="button-container">
+              <button
+                class="stakes-unstake-button"
+                style="background: grey; cursor: not-allowed"
+              >
+                Not Connected
+              </button>
+            </div>
+          </div>
+          <div class="stakes-card-item pool2-card-item">
+            <div class="stakes-card-item-content">
+              <div class="stakes-info"><p class="stakes-text">Pool 2</p></div>
+              <div class="stakes-info">
+                <p class="stakes-text">PARTY</p>
+                <p class="stakes-text-faded">Staked</p>
+              </div>
+              <div class="stakes-info">
+                <p class="stakes-text-apy">2,292.2%</p>
+                <p class="stakes-text-faded">Win APR</p>
+              </div>
+            </div>
+            <div class="button-container">
+              <button
+                class="stakes-unstake-button"
+                style="background: grey; cursor: not-allowed"
+              >
+                Not Connected
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="toolTip" id="toolTipStakes">
+        <h3>Stakes Panel</h3>
+        <p>Stake, Unstake, Contribute Favor and Jump Pools Quickly.</p>
+      </div>
+    </div>
+
+    <!-- ///////////////////////////////// -->
+    <div class="parent-grid-container">
+      <div class="second_card" style="--border-color: #69b3f7">
+        <div class="card_data">
+          <div class="heading">
+            <h1 class="card-text">Pool 1</h1>
+            <div class="Card-label">Smart Pool</div>
+            <img src="images/question.png" alt="question" id="question" />
+          </div>
+          <div class="para">
+            <p>
+              The pool has
+              <span style="color: rgb(255, 116, 116)">higher risk</span> and a
+              <span style="color: rgb(126, 255, 123)">higher reward</span>
+            </p>
+          </div>
+
+          <div class="tags">
+            <div>
+              <p class="child radius padding" id="grp-btn-selected">Stake</p>
+            </div>
+            <div><p class="child" id="grp-btn-selected">Unstake</p></div>
+            <div><p class="child" id="grp-btn-selected">Jump</p></div>
+            <div><p class="child" id="grp-btn-selected">Favor</p></div>
+          </div>
+          <!-- /////////// -->
+          <div class="input">
+            <input type="text" class="text" />
+            <h3>PARTY</h3>
+          </div>
+          <div class="user-stake-info-container">
+            <ol class="pool-list">
+              <li>
+                <span class="user-stake-info-label"
+                  >Win APR<span class="dots"></span></span
+                ><span class="user-stake-info-value">5496.90%</span>
+              </li>
+            </ol>
+          </div>
+          <!-- //////// -->
+          <button disabled="" class="locked-button" style="">
+            <div style="display: flex; align-items: center; gap: 4px">
+              <p class="button-text">Locked</p>
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+                style="z-index: 1"
+              >
+                <path
+                  d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"
+                ></path>
+              </svg>
+            </div>
+            <div class="button-text"><div>12:53:03</div></div>
+          </button>
+          <div class="stake-info-container">
+            <ol class="pool-list">
+              <li>
+                <span class="stake-info-label">Total staked</span
+                ><span class="stake-info-value">12,125,643.91 PARTY</span>
+              </li>
+              <li>
+                <span class="stake-info-label">Potential gain this epoch</span
+                ><span class="stake-info-value">15.06%</span>
+              </li>
+              <li>
+                <span class="stake-info-label">Current chance of winning</span
+                ><span class="stake-info-value">30.94%</span>
+              </li>
+            </ol>
+          </div>
+          <!-- //////// -->
+        </div>
+      </div>
+      <div class="favor-grid-container">
+        <div class="third_card" style="--border-color: #69b3f7">
+          <div class="card_data">
+            <div class="heading">
+              <h1 class="card-text">Pool 2</h1>
+              <div class="Card-label big">Big Pool</div>
+              <img src="images/question.png" alt="question" id="question" />
+            </div>
+            <div class="para">
+              <p>
+                The pool has
+                <span style="color: rgb(255, 116, 116)">higher risk</span> and a
+                <span style="color: rgb(126, 255, 123)">higher reward</span>
+              </p>
+            </div>
+
+            <div class="tags">
+              <div>
+                <p class="child radius padding" id="grp-btn-selected">Stake</p>
+              </div>
+              <div><p class="child" id="grp-btn-selected">Unstake</p></div>
+              <div><p class="child" id="grp-btn-selected">Jump</p></div>
+              <div><p class="child" id="grp-btn-selected">Favor</p></div>
+            </div>
+            <!-- /////////// -->
+            <div class="input">
+              <input type="text" class="text" />
+              <h3>PARTY</h3>
+            </div>
+            <div class="user-stake-info-container">
+              <ol class="pool-list">
+                <li>
+                  <span class="user-stake-info-label"
+                    >Win APR<span class="dots"></span></span
+                  ><span class="user-stake-info-value">2423.60%</span>
+                </li>
+              </ol>
+            </div>
+            <!-- //////// -->
+            <button disabled="" class="locked-button" style="">
+              <div style="display: flex; align-items: center; gap: 4px">
+                <p class="button-text">Locked</p>
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 448 512"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="z-index: 1"
+                >
+                  <path
+                    d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="button-text"><div>12:23:13</div></div>
+            </button>
+            <div class="stake-info-container">
+              <ol class="pool-list">
+                <li>
+                  <span class="stake-info-label">Total staked</span
+                  ><span class="stake-info-value">18,265,721.55 PARTY</span>
+                </li>
+                <li>
+                  <span class="stake-info-label">Potential gain this epoch</span
+                  ><span class="stake-info-value">6.64%</span>
+                </li>
+                <li>
+                  <span class="stake-info-label">Current chance of winning</span
+                  ><span class="stake-info-value">69.06%</span>
+                </li>
+              </ol>
+            </div>
+            <!-- //////// -->
+          </div>
+        </div>
+      </div>
+      <div class="favor-grid-Container">
+        <div class="Card cards favorMeterCard" style="--border-color: #db69f7">
+          <div class="Card-title">
+            <h1 class="Card-title-text">FAVOR Meter</h1>
+            <img
+              class="questionIcon"
+              id="favorIcon"
+              width="25"
+              src="images/question.png"
+            />
+          </div>
+          <div class="favor-meter">
+            <div class="favor-meter-ring">
+              <div class="progress-container">
+                <svg class="progress-ring" viewBox="0 0 320 160">
+                  <defs>
+                    <linearGradient
+                      id="linear"
+                      x1="0%"
+                      y1="0%"
+                      x2="0%"
+                      y2="100%"
+                      gradientTransform="rotate(-130)"
+                    >
+                      <stop offset="0%" stop-color="#e45cf5"></stop>
+                      <stop offset="100%" stop-color="#BDO1FF"></stop>
+                    </linearGradient>
+                    <filter id="dropshadow" height="150%">
+                      <feGaussianBlur
+                        in="SourceAlpha"
+                        stdDeviation="1"
+                      ></feGaussianBlur>
+                      <feOffset dx="-2" dy="0" result="offsetblur"></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA type="linear" slope="0.5"></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#BD01FF"
+                    stroke-opacity="100%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="136"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#fff"
+                    stroke-width="27"
+                    fill="transparent"
+                    r="146"
+                    stroke-linecap="round"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="917.3450548482195"
+                    stroke-dashoffset="488"
+                    transform="rotate(185.5 160 160)"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#BD01FF"
+                    stroke-opacity="100%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="126"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#01FFF0"
+                    stroke-opacity="60%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="116"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#01FFD1"
+                    stroke-opacity="50%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="106"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#01FFC2"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="96"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#01FFF0"
+                    stroke-opacity="40%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="86"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#01FFB3"
+                    stroke-opacity="30%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="76"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#01D1FF"
+                    stroke-opacity="20%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="66"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="#01D1FF"
+                    stroke-opacity="10%"
+                    stroke-width="3"
+                    fill="transparent"
+                    r="56"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="1 10 1 10 1 10"
+                  ></circle>
+                  <circle
+                    class="progress-ring__circle"
+                    stroke="url(#linear)"
+                    stroke-width="28"
+                    fill="transparent"
+                    r="146"
+                    stroke-linecap="round"
+                    cx="160"
+                    cy="160"
+                    stroke-dasharray="917.3450548482195"
+                    stroke-dashoffset="743.0300178866152"
+                    transform="rotate(-174.5 160 160)"
+                    filter="url(#dropshadow)"
+                  ></circle>
+                  <text
+                    class="progress-text__percentage"
+                    x="50%"
+                    y="65%"
+                    dominant-baseline="middle"
+                    text-anchor="middle"
+                    style="color: #ffff !important"
+                  >
+                    <h2 style="color: #ffff; font-size: 2.2rem" id="abc">
+                      63.13%
+                    </h2>
+                  </text>
+                  <text
+                    class="progress-text__progress"
+                    x="50%"
+                    y="90%"
+                    dominant-baseline="middle"
+                    text-anchor="middle"
+                  >
+                    <p id="pool">Pool 2 is winning</p>
+                  </text>
+                </svg>
+                <div class="progress-text__container">
+                  <p class="progress-text__label">Pool 1</p>
+                  <p class="progress-text__label">Pool 2</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="favor-info">
+            <div class="favor-info-container">
+              <ol class="favor-list" id="favor">
+                <li>
+                  <span class="favor-stake-info-label pools">Pool 1 FAVOR</span
+                  ><span class="user-stake-info-text favorAmount"
+                    >358 FAVOR</span
+                  >
+                </li>
+                <li>
+                  <span class="favor-stake-info-label pools">Pool 2 FAVOR</span
+                  ><span class="user-stake-info-text favorAmount"
+                    >584 FAVOR</span
+                  >
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="Card candyCard favorBuyCard"
+          style="--border-color: #ca69f7"
+        >
+          <div class="Buy-Box">
+            <div class="Candy-Box">
+              <img src="images/Candy.png" class="favorLogo" width="60rem" />
+            </div>
+            <div class="Buy-Box-Text-container">
+              <div class="Buy-Box-Title-Div">
+                <h4 class="Buy-Box-Title">Buy FAVOR</h4>
+                <img
+                  class="questionIcon"
+                  id="buyIcon"
+                  width="25"
+                  src="images/question.png"
+                />
+              </div>
+              <div class="Buy-Box-Text-Div">
+                <p class="Buy-Box-Text">
+                  Contribute $FAVOR to a pool to increase its chances of winning
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="stake-info">
+            <div class="stake-info-container">
+              <ol class="favor-list list">
+                <li>
+                  <span class="favor-stake-info-label">Price per Favor</span
+                  ><span class="stake-info-value partyAmount">99 PARTY</span>
+                </li>
+              </ol>
+            </div>
+            <button
+              class="Purchase-Button"
+              type="button"
+              style="background: grey; cursor: not-allowed"
+            >
+              Not Connected
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- /////////////////// -->
+    </div>
+    <div class="pool-flex-container" id="pool-flex">
+      <div class="Card Pool3 pool3Card" style="--border-color: #eed067">
+        <div class="Card-title pool-title" id="flex">
+          <h1 class="Card-title-text">Pool 3</h1>
+          <div class="Card-label" id="label">Liquidity Pool</div>
+          <img
+            class="questionIcon icon"
+            width="25"
+            id="pool3Icon"
+            src="images/question.png"
+          />
+        </div>
+        <div><p></p></div>
+        <div class="parent-container-card">
+          <div>
+            <p class="child lpTexts" id="grp-btn-selected">Stake LP</p>
+          </div>
+          <div><p class="child lpText" id="grp-btn">Unstake LP</p></div>
+        </div>
+        <form class="input-container">
+          <input type="text" name="amount" class="input" value="" />
+          <h3>PARTY</h3>
+          <div class="amount-container">
+            <div><p class="child available"></p></div>
+            <div><p class="child max-button"></p></div>
+          </div>
+          <div class="user-stake-info">
+            <div class="user-stake-info-container">
+              <ol class="pool-list">
+                <li>
+                  <span class="user-stake-info-label">APR</span
+                  ><span class="user-stake-info-value">0.00%</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="stake-info">
+            <div class="stake-info-container">
+              <ol class="pool-list">
+                <li>
+                  <span class="stake-info-label">Total staked</span
+                  ><span class="stake-info-value">2,969.02 LP</span>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="toolTip" id="toolTipPool3" style="visibility: hidden">
+        <h3>Pool 3</h3>
+        <p>
+          Pool 3 is a unique opportunity for users to stake $PARTY-ETH LP tokens
+          and earn increasing rewards over the first two weeks of the Pool Party
+          launch. The rewards are distributed every 24 hours.
+        </p>
+      </div>
+    </div>
+    <!-- //////////////////// -->
+
+    <div class="Card card4 supplyCard" style="--border-color: #a0a1d5">
+      <div class="Card-title">
+        <h1 class="Card-title-text">PARTY Supply</h1>
+        <img
+          class="questionIcon"
+          id="supplyIcon"
+          width="25"
+          src="images/question.png"
+        />
+      </div>
+      <div class="card-info">
+        <div class="left">
+          <div class="images">
+            <img src="images/circle.png" alt="image" id="circle" />
+          </div>
+        </div>
+        <div class="right">
+          <div class="numbers">
+            <h3>Total Supply</h3>
+            <h2>641538458.00 PARTY</h2>
+            <h4>2277987.59 USD</h4>
+          </div>
+
+          <div class="numbers">
+            <div class="flexx">
+              <h1 style="color: #59f484">.</h1>
+              <h3 class="abs" style="color: #59f484">Staked</h3>
+            </div>
+            <h2>29659923.00 PARTY</h2>
+            <h4>103996.00 USD</h4>
+          </div>
+
+          <div class="numbers">
+            <div class="flexx">
+              <h1 style="color: #f4b859">.</h1>
+              <h3 class="abs" style="color: #f4b859">Burned</h3>
+            </div>
+            <h2>358461542.00 PARTY</h2>
+            <h4>1256482.00 USD</h4>
+          </div>
+
+          <div class="numbers">
+            <div class="flexx">
+              <h1 style="color: #5d9af6">.</h1>
+              <h3 class="abs" style="color: #5d9af6">Liquid</h3>
+            </div>
+            <h2>57702698.54 PARTY</h2>
+            <h4>202306.00 USD</h4>
+          </div>
+
+          <div class="numbers">
+            <div class="flexx">
+              <h1 style="color: #ee6667">.</h1>
+              <h3 class="abs" style="color: #ee6667">Future Incentives</h3>
+            </div>
+            <h2>86077201.00 PARTY</h2>
+            <h4>86077201.00 PARTY</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ///////////// Footer //////////////////////  -->
+    <div class="footer">
+      <div class="left-footer">
+        <button class="footer-button">Buy $PARTY</button>
+        <button class="footer-button">Add Liquidity</button>
+      </div>
+      <div class="right-footer">
+        <img src="images/twitter.PNG" alt="img" />
+        <img src="images/message.PNG" alt="img" />
+        <img src="images/msg.PNG" alt="img" />
+      </div>
+    </div>
+  </body>
+</html>
